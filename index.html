@@ -8,7 +8,7 @@
 <body>
     
     <script>
-        
+
         const words = ['Rock', 'Paper', 'Scissors'];
 
         function getComputerChoice () {
@@ -45,13 +45,6 @@
           for(let i = 0; i < 5; i++) {
             const playerSelection = window.prompt("Enter your choice (Rock, Paper, or Scissors):");
 
-            if (playerSelection === words) {
-                break;
-            } else {
-                alert("Please choose either rock, paper or scissors!")
-                return;
-            }
-
             const computerSelection = getComputerChoice();
             const result = playRound(playerSelection, computerSelection)
             alert(result);
@@ -74,7 +67,7 @@
 
         }
 
-        alert(`${gameResult}\nPlayer Points: ${playerPoints}\nComputer Points: ${computerPoints}\nTie: ${resultTie}`);
+        alert(`${gameResult}\nPlayer Points: ${playerPoints}\nComputer Points: ${computerPoints}\nTies: ${resultTie}`);
         }
 
         game();
