@@ -9,6 +9,7 @@
     
     <script>
 
+        //This code makes the computer generate one of the three available choices (rock, paper and scissor)
         function getComputerChoice () {
 
             const randomNumber = Math.floor(Math.random() * 3);
@@ -19,6 +20,7 @@
         }
         const randomWord = getComputerChoice();
 
+        //This code checks and calculates wether the player has beat the computer in the game or not, it also takes into account wether or not it's a tie
         function playRound(playerSelection, computerSelection) {
             playerSelection = playerSelection.toLowerCase();
             computerSelection = computerSelection.toLowerCase();
@@ -38,16 +40,19 @@
 
         function game() {
 
+            //Sets the value of the variables im using further down to zero 
             let playerPoints = 0;
             let computerPoints = 0;
             let resultTie = 0;
 
+            //A for loop which makes the game last five rounds, and gives the prompt for the user input
           for(let i = 0; i < 5; i++) {
             const playerSelection = window.prompt("Enter your choice (Rock, Paper, or Scissors):");
             const computerSelection = getComputerChoice();
             const result = playRound(playerSelection, computerSelection)
             alert(result);
 
+            //This code deals out points to whoever won the round of rock, paper, scissors, here as well a tie is taken into account
             if (result.startsWith('You win')) {
                 playerPoints++;
             } else if (result.startsWith('You lose')) {
@@ -56,16 +61,18 @@
                 resultTie++;
             }
 
+            //This code determines who won and gives the game result a value according to the result of the game
             if (playerPoints > computerPoints) {
                 gameResult = "You beat the computer!"
             } else if (playerPoints < computerPoints) {
                 gameResult = "The computer got the best of you, please try again"
             } else if (playerPoints == computerPoints) {
-                gameResult = "It's a tie! Please try again"
+                gameResult = "It's a tie! Please try again" 
             }
 
         }
 
+        //This is the code for the pop up alert that occurs after the game is finished, containing the values of both if loops above this, the points of each individual participating in the game and the game result
         alert(`${gameResult}\nPlayer Points: ${playerPoints}\nComputer Points: ${computerPoints}\nTie: ${resultTie}`);
         }
 
