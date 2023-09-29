@@ -37,13 +37,21 @@
         }
 
         function game() {
+
+            let playerPoints = 0;
+            let computerPoints = 0;
+            
           for(let i = 0; i < 5; i++) {
             const playerSelection = window.prompt("Enter your choice (Rock, Paper, or Scissors):");
             const computerSelection = getComputerChoice();
             const result = playRound(playerSelection, computerSelection)
             alert(result);
+
+            if (result.startsWith("You win")) {
+                    playerPoints ++;
+            }
+            }
         }
-    }
 
         game();
 
