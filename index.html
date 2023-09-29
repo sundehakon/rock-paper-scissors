@@ -8,12 +8,12 @@
 <body>
     
     <script>
+        
+        const words = ['Rock', 'Paper', 'Scissors'];
 
         function getComputerChoice () {
 
             const randomNumber = Math.floor(Math.random() * 3);
-
-            const words = ['Rock', 'Paper', 'Scissors'];
 
             return words[randomNumber];
         }
@@ -48,8 +48,10 @@
             if (playerSelection === words) {
                 break;
             } else {
-                return("Please choose either rock, paper or scissors!")
+                alert("Please choose either rock, paper or scissors!")
+                return;
             }
+
             const computerSelection = getComputerChoice();
             const result = playRound(playerSelection, computerSelection)
             alert(result);
