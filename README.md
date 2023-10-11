@@ -3,3 +3,6 @@ Created a simple rock-paper-scissors game in a browser dialog box using javascri
 
 # Test it here !
 https://sundehakon.github.io/rock-paper-scissors/
+
+# UI
+Im going to be working on creating a ui design for this website soon
