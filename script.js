@@ -56,6 +56,11 @@ function game() {
 
 }
 
+document.getElementById("rock").addEventListener("click", myFunction)
+
+function myFunction() {
+    alert("Hello")
+}
 alert(`${gameResult}\nPlayer Points: ${playerPoints}\nComputer Points: ${computerPoints}\nTies: ${resultTie}`);
 }
 
