@@ -25,7 +25,6 @@ function playRound(playerSelection, computerSelection) {
         return `You lose! ${computerSelection} beats ${playerSelection}.`;
     }
 }
-
 function game() {
 
     let playerPoints = 0;
